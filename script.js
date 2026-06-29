@@ -1026,8 +1026,8 @@ window.openWithdrawAdmin = async function(){
 document.getElementById("withdrawAdminPage")
 .classList.remove("hidden");
 
-let snap = await getDocs(
-collection(window.db,"withdrawRequests")
+let snap = await window.getDocs(
+window.collection(window.db, "withdrawRequests")
 );
 alert("After Firebase");
      alert("Docs Count = " + snap.size);
@@ -1069,20 +1069,13 @@ document.getElementById("withdrawList").style.color = "black";
      
      document.getElementById("withdrawList").innerHTML = html;
 
-alert(document.getElementById("withdrawAdminPage").outerHTML);
-
-alert("Inserted");
-document.getElementById("withdrawAdminPage").style.display = "block";
-document.getElementById("withdrawAdminPage").style.background = "white";
-document.getElementById("withdrawAdminPage").style.minHeight = "100vh";
-
 }
 
 
 window.approveWithdraw = async function(id){
 
-let reqDoc = await getDoc(
-doc(window.db,"withdrawRequests",id)
+let reqDoc = await window.getDoc(
+window.doc(window.db,"withdrawRequests",id)
 );
 
 let reqData = reqDoc.data();
@@ -1092,8 +1085,8 @@ alert("Already Approved");
 return;
 }
 
-let userDoc = await getDoc(
-doc(window.db,"users",reqData.userId)
+let userDoc = await window.getDoc(
+window.doc(window.db,"users",reqData.userId)
 );
 
 let userData = userDoc.data();
@@ -1107,8 +1100,8 @@ points: Number(userData.points || 0) - Number(reqData.points || 0)
 );
 }
 
-await updateDoc(
-doc(window.db,"withdrawRequests",id),
+await window.updateDoc(
+window.doc(window.db,"withdrawRequests",id),
 {
 status:"approved"
 }
@@ -1121,14 +1114,14 @@ openWithdrawAdmin();
 }
 window.rejectWithdraw = async function(id){
 
-let reqDoc = await getDoc(
-doc(window.db,"withdrawRequests",id)
+let reqDoc = await window.getDoc(
+window.doc(window.db,"withdrawRequests",id)
 );
 
 let reqData = reqDoc.data();
 
-let userDoc = await getDoc(
-doc(window.db,"users",reqData.userId)
+let userDoc = await window.getDoc(
+window.doc(window.db,"users",reqData.userId)
 );
 
 let userData = userDoc.data();
