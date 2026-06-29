@@ -1013,7 +1013,7 @@ alert("Withdrawal Request Submitted");
 
 }
 
-let currentFilter = "approved";
+let currentFilter = "pending";
 
 window.openWithdrawAdmin = async function(){
      
@@ -1069,6 +1069,8 @@ document.getElementById("withdrawList").style.color = "black";
      
      document.getElementById("withdrawList").innerHTML = html;
 
+alert(document.getElementById("withdrawAdminPage").innerHTML);
+  
 }
 
 
