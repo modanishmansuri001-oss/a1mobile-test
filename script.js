@@ -1072,6 +1072,9 @@ document.getElementById("withdrawList").style.color = "black";
 alert(document.getElementById("withdrawAdminPage").outerHTML);
 
 alert("Inserted");
+document.getElementById("withdrawAdminPage").style.display = "block";
+document.getElementById("withdrawAdminPage").style.background = "white";
+document.getElementById("withdrawAdminPage").style.minHeight = "100vh";
 
 }
 
