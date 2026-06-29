@@ -957,8 +957,8 @@ return;
 
 // 👇 यहीं Paste करो
 
-let pendingCheck = await getDocs(
-collection(window.db,"withdrawRequests")
+let pendingCheck = await window.getDocs(
+window.collection(window.db,"withdrawRequests")
 );
 
 let alreadyPending = false;
@@ -1170,7 +1170,7 @@ window.loadWithdrawalHistory = async function() {
 document.getElementById("withdrawHistoryList");
 
   let snapshot = await getDocs(
-    collection(window.db, "withdrawRequests")
+  window.collection(window.db, "withdrawRequests")
   );
   let html = "";
 
