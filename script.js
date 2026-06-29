@@ -1136,15 +1136,15 @@ alert("Already Approved");
 return;
      }
 
-await updateDoc(
-doc(window.db,"users",reqData.userId),
+await window.updateDoc(
+window.doc(window.db,"users",reqData.userId),
 {
 points: Number(userData.points || 0) + Number(reqData.points || 0)
 }
 );
 
-await updateDoc(
-doc(window.db,"withdrawRequests",id),
+await window.updateDoc(
+window.doc(window.db,"withdrawRequests",id),
 {
 status:"rejected"
 }
