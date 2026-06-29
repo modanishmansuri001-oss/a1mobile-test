@@ -1037,9 +1037,9 @@ snap.forEach((doc)=>{
   let data = doc.data();
      alert(JSON.stringify(data));
 
-if(data.status !== currentFilter){
-return;
-}
+//if(data.status !== currentFilter){
+//return;
+//}
 
 let requestId = doc.id;
 
