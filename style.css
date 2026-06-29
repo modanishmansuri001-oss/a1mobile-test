@@ -1,0 +1,853 @@
+/* ======================================
+              TOP BAR
+====================================== */
+.topbar{
+width:100%;
+background:#007bff;
+color:white;
+padding:15px;
+font-size:22px;
+display:flex;
+align-items:center;
+box-sizing:border-box;
+margin:0;
+}
+/* ======================================
+            MENU BUTTON
+====================================== */
+.menu-btn{
+  cursor:pointer;
+  margin-right:20px;
+  font-size:28px;
+}
+/* ======================================
+             APP TITLE
+====================================== */
+.app-title{
+  font-weight:bold;
+}
+/* ======================================
+             SIDE MENU
+====================================== */
+.side-menu{
+  height:100%;
+  width:0;
+  position:fixed;
+  top:0;
+  left:0;
+  background:white;
+  overflow-x:hidden;
+  transition:0.3s;
+  padding-top:60px;
+  box-shadow:0 0 10px rgba(0,0,0,0.3);
+  z-index:9999;
+}
+/* ======================================
+             MENU ITEMS
+====================================== */
+.side-menu .menu-item{
+  padding:15px;
+  border-bottom:1px solid #ddd;
+  font-size:18px;
+}
+/* ======================================
+             MENU OPEN
+====================================== */
+.show{
+left:0;
+}
+/* ======================================
+                BODY
+====================================== */
+body{
+font-family: Arial; sans-serif;
+background:#f2f2f2;
+margin:0;
+padding:0; 
+}
+/* ======================================
+              CONTAINER
+====================================== */
+.container{
+  width:100%;
+  max-width:100%;
+  margin:0;
+  padding:20px;
+  box-sizing:border-box;
+  }
+/* ======================================
+           ADVANCED LOGIN
+====================================== */
+
+#loginPage{
+
+width:100%;
+max-width:100%;
+box-sizing:border-box;
+
+margin-top:20px;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(15px);
+
+border-radius:30px;
+
+padding:30px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+border:1px solid rgba(255,255,255,0.2);
+
+animation:fadeLogin 1s ease;
+
+}
+#loginPage h2{
+
+color:#007bff;
+
+font-size:32px;
+
+margin-bottom:25px;
+
+}
+
+#loginPage input{
+
+background:rgba(255,255,255,0.9);
+
+border:none;
+
+padding:16px;
+
+font-size:18px;
+
+border-radius:15px;
+
+margin-top:15px;
+
+}
+#loginPage button{
+
+background:linear-gradient(135deg,#007bff,#0056d6);
+
+padding:16px;
+
+font-size:20px;
+
+border-radius:15px;
+
+font-weight:bold;
+
+box-shadow:0 5px 15px rgba(0,123,255,0.3);
+
+}
+
+/* ======================================
+          LOGIN ANIMATION
+====================================== */
+
+@keyframes fadeLogin{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+/* ==================
+   HEADINGS
+================== */
+h2,h3{
+text-align:center;
+}
+/* ==================
+   INPUT FIELDS
+================== */
+input{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:5px;
+box-sizing:border-box;
+}
+/* ==================
+   BUTTONS
+================== */
+button{
+width:100%;
+padding:12px;
+margin-top:15px;
+border:none;
+background:#007bff;
+color:white;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+/* ==================
+   COMMON CLASSES
+================== */
+.hidden{
+display:none;
+}
+/* ==================
+   SIDE MENU V2
+================== */
+.side-menu{
+position:fixed;
+top:0;
+left:-250px;
+width:250px;
+height:100%;
+background:white;
+transition:0.3s;
+z-index:9999;
+}
+.side-menu.show{
+left:0;
+}
+/* ==================
+   CARDS
+================== */
+.card{
+background:#fafafa;
+padding:15px;
+margin-top:15px;
+border-radius:8px;
+}
+/* ==================
+   REWARD POINTS
+================== */
+.points{
+font-size:22px;
+color:green;
+font-weight:bold;
+}
+/* =================
+     MENU ITEMS
+ ================= */
+.menu-item{
+padding:12px;
+border-bottom:1px solid #ddd;
+font-size:18px;
+}
+/* ================= 
+  CLOSE BUTTON
+================= */
+.close-btn{
+position:absolute;
+top:10px;
+right:20px;
+font-size:35px;
+cursor:pointer;
+}
+/* =================
+    IMAGE SLIDER
+================= */
+.slider img{
+width:100%;
+height:auto;
+border-radius:20px;
+}
+/* ================= 
+  ACTIVE SLIDE 
+================= */
+.slide.active{
+display:block;
+}
+/* ================= 
+    EARN BUTTON 
+ ================= */
+.earn-btn{
+display:block;
+width:90%;
+
+margin:25px auto 0;
+
+padding:20px;
+
+font-size:22px;
+font-weight:bold;
+
+border:none;
+border-radius:20px;
+
+background:linear-gradient(135deg,#00b300,#008f00);
+
+color:white;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+transition:0.3s;
+}
+/* ================= 
+EARN BUTTON CLICK EFFECT 
+ ================= */
+.earn-btn:active{
+transform:scale(0.97);
+}
+/* ================= 
+  BANNER SLIDER
+================= */
+.banner-slider{
+width:100%;
+height:180px;
+position:relative;
+overflow:hidden;
+border-radius:15px;
+margin-bottom:20px;
+}
+/* ================= 
+   SLIDER PHOTOS
+ ================= */
+.photo{
+width:100%;
+height:180px;
+object-fit:cover;
+position:absolute;
+display:none;
+}
+/* ================= 
+    ACTIVE PHOTO
+ ================= */
+.active-photo{
+display:block;
+}
+/* ================= 
+   IMAGE SLIDER
+================= */
+.slider{
+width:100%;
+overflow:hidden;
+}
+/* ================= 
+  SINGLE IMAGE
+================= */
+.slide{
+display:none;
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:20px;
+margin-bottom:10px;
+}
+/* =================
+  ACTIVE IMAGE 
+================= */
+.slide.active{
+display:block;
+}
+/* ================= 
+   TEXT SLIDER
+================= */
+.text-slider{
+background:linear-gradient(135deg,#007bff,#0056d6);
+color:white;
+padding:25px;
+border-radius:25px;
+margin-top:15px;
+margin-bottom:20px;
+min-height:170px;
+
+font-size:20px;
+font-weight:bold;
+line-height:1.7;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+transition:0.5s;
+overflow:hidden;
+}
+
+/* ==================
+   TEXT SLIDE
+================== */
+
+.textSlide{
+display:none;
+animation:fade 0.5s ease;
+}
+
+/* ==================
+   ACTIVE TEXT SLIDE
+================== */
+
+.textSlide.active{
+display:block;
+}
+/* =================
+  TEXT ANIMATION 
+================= */
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+/* =================
+    OTP POPUP 
+================= */
+.otp-popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+/* ================= 
+ OTP BOX DESIGN 
+================= */
+.otp-content{
+background:white;
+padding:25px;
+border-radius:20px;
+width:80%;
+text-align:center;
+}
+/* =================
+   OTP INPUT 
+================= */
+.otp-content input{
+width:90%;
+padding:12px;
+font-size:18px;
+margin-top:15px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+/* ================= 
+     OTP BUTTON
+ ================= */
+.otp-content button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#007bff;
+color:white;
+font-size:18px;
+border-radius:10px;
+}
+/* =================
+   OTP TIMER 
+================= */
+#timer{
+margin-top:15px;
+color:red;
+font-weight:bold;
+}
+/* =================
+ OTP BUTTON GROUP
+ ================= */
+.otp-buttons{
+display:flex;
+gap:10px;
+margin-top:20px;
+}
+/* ================= 
+ OTP BUTTON STYLE 
+ ================= */
+.otp-buttons button{
+flex:1;
+padding:14px;
+border:none;
+border-radius:12px;
+font-size:18px;
+color:white;
+}
+/* ================= 
+   VERIFY BUTTON 
+  ================= */
+#verifyBtn{
+background:#007bff;
+}
+/* ================= 
+   RESET BUTTON 
+================= */
+#resetBtn{
+background:#28a745;
+}
+/* ================= 
+ HIDDEN ELEMENT 
+================= */
+.hidden{
+display:none;
+}
+/* =================
+   PROFILE CARD
+  ================= */
+.profile-card{
+
+background:white;
+
+padding:20px;
+
+border-radius:20px;
+
+margin-top:20px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+/* ================= 
+PROFILE CARD TITLE 
+================= */
+.profile-card h2{
+
+margin-bottom:15px;
+
+}
+/* ================= 
+ PROFILE CARD TEXT 
+ ================= */
+.profile-card p{
+
+margin:10px 0;
+
+font-size:16px;
+
+}
+/* =================
+PROFILE CARD BUTTON 
+================= */
+.profile-card button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:15px;
+
+background:#007bff;
+
+color:white;
+
+font-size:18px;
+
+margin-top:15px;
+
+}
+#helpPopup{
+display:none;
+}
+/* ================= SPLASH SCREEN ================= */
+
+#splashScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(135deg,#007bff,#0056d6);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:99999;
+color:white;
+font-family:Arial,sans-serif;
+transition:0.5s;
+}
+
+#splashScreen img{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:30px;
+  animation:zoomLogo 1.5s infinite alternate;
+  box-shadow:0 0 30px rgba(255,255,255,0.5);
+  }
+}
+
+@keyframes zoomLogo{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.08);
+}
+}
+
+#splashScreen h1{
+margin-top:20px;
+font-size:32px;
+}
+
+#splashScreen p{
+margin-top:10px;
+font-size:18px;
+opacity:0.9;
+}
+
+.loader{
+  width:50px;
+  height:50px;
+  border:5px solid rgba(255,255,255,0.3);
+  border-top:5px solid white;
+  border-radius:50%;
+  margin-top:20px;
+  animation:spin 1s linear infinite;
+  }
+
+  @keyframes spin{
+  0%{
+  transform:rotate(0deg);
+  }
+  100%{
+  transform:rotate(360deg);
+  }
+  }
+}
+/* ================= INTRO SCREEN ================= */
+
+.intro-slide{
+display:none;
+height:100vh;
+padding:20px;
+text-align:center;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+box-sizing:border-box;
+}
+
+.intro-slide.active{
+display:flex;
+}
+
+.intro-buttons{
+position:fixed;
+bottom:20px;
+left:0;
+right:0;
+display:flex;
+justify-content:center;
+gap:15px;
+z-index:999999;
+}
+
+.intro-buttons button{
+padding:14px 30px;
+border:none;
+border-radius:15px;
+background:#007bff;
+color:white;
+font-size:18px;
+font-weight:bold;
+}
+#introScreen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:99999;
+overflow:hidden;
+}
+.intro-buttons{
+position:absolute;
+bottom:20px;
+left:0;
+width:100%;
+display:flex;
+justify-content:center;
+gap:15px;
+}
+#introScreen{
+display:none;
+}
+
+.logo-animation{
+animation: floatLogo 2s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+ 0%{
+transform: translateY(0px);
+}
+50%{
+ transform: translateY(-10px);
+ 100%{
+ transform: translateY(0px);
+ }
+}
+}
+
+
+            
+#loginPage h2{
+animation:textGlow 2s infinite;
+}
+
+@keyframes textGlow{
+0%{opacity:0.7;}
+50%{opacity:1;}
+100%{opacity:0.7;}
+}
+}
+
+#loginPage{
+margin-top:60px;
+animation:floatCard 4s ease-in-out infinite;
+}
+@keyframes floatCard{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-8px);
+}
+100%{
+transform:translateY(0px);
+}
+}
+
+/* ==================
+   ANNOUNCEMENT BAR
+================== */
+
+.announcement-bar{
+  width:100%;
+  height:40px;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  white-space:nowrap;
+  position:fixed;
+  top:0;
+  left:0;
+  position:relative;   /* fixed हटाओ */
+  margin-bottom:10px;  /* नीचे gap */
+  z-index:1;
+border-radius:0 0 10px 10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+.announcement-bar a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+  display:inline-block;
+  padding-left:100%;
+  animation:scrollText 15s linear infinite;
+}
+
+@keyframes scrollText{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-100%);
+  }
+}
+
+#dashboard{
+padding:-10;
+margin:0;
+}
+
+/* ==================
+   ADMIN CARDS
+================== */
+
+.admin-cards{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin:15px 0;
+}
+
+.admin-card{
+background:linear-gradient(135deg,#ffffff,#f8f9fa);
+padding:18px;
+border-radius:16px;
+box-shadow:0 4px 15px rgba(0,0,0,0.08);
+text-align:center;
+transition:0.3s;
+border:1px solid #f0f0f0;
+}
+
+ .admin-card:hover{
+transform:translateY(-3px);
+       }
+
+.admin-card h3{
+margin:0;
+font-size:14px;
+color:#666;
+}
+
+.admin-card p{
+margin-top:8px;
+font-size:22px;
+font-weight:bold;
+}
+
+/* ==================
+   QUICK ACTIONS
+================== */
+
+.quick-actions{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:15px;
+}
+
+/* ==================
+   ACTION CARD
+================== */
+
+.action-card{
+background:linear-gradient(135deg,#1e88ff,#0066ff);
+color:#fff;
+border-radius:18px;
+padding:18px 10px;
+text-align:center;
+box-shadow:0 6px 15px rgba(0,102,255,.25);
+cursor:pointer;
+transition:.3s;
+}
+
+.action-card:active{
+transform:scale(.95);
+}
+
+.action-card span{
+display:block;
+margin-top:8px;
+font-size:12px;
+font-weight:600;
+color:#fff;
+}
+.quick-actions{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin:15px 0;
+}
+       

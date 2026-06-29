@@ -1,0 +1,564 @@
+<!-- =========================
+     A1 MOBILE REFERRAL SYSTEM
+========================= -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A1 Mobile Referral System</title>
+
+  <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+     <div class="announcement-bar">
+  <a href="https://chat.whatsapp.com/HZ12IJErDh7Fi1RWvP54Bb?s=cl&p=a&ilr=1" target="_blank">
+  📢 Join Official A1 Mobile WhatsApp Group 🚀 | Latest Updates • Support • New Features 🎉 | Click Here 👇
+  </a>
+  </div>
+  <!-- ================= SPLASH SCREEN ================= -->
+
+  <div id="splashScreen">
+<img src="https://i.ibb.co/ks6dTrSr/file-0000000049f87207bbe4d99c33a4a8d1.png">
+
+<h1>A1 Mobile</h1>
+
+<h3>Referral System</h3>
+
+<p>🚀 Earn • Refer • Grow</p>
+
+<div class="loader"></div>
+</div>
+
+<!-- ================= INTRO SCREEN ================= -->
+
+<div id="introScreen">
+
+<div class="intro-slide active">
+
+<img src="https://i.ibb.co/ks6dTrSr/file-0000000049f87207bbe4d99c33a4a8d1.png">
+
+<h1>Earn Rewards</h1>
+
+<p>Share OTP leads and earn reward points daily 💰</p>
+
+</div>
+
+<div class="intro-slide">
+
+<img src="https://i.ibb.co/ks6dTrSr/file-0000000049f87207bbe4d99c33a4a8d1.png">
+
+<h1>Fast Verification</h1>
+
+<p>Verify OTP quickly and collect reward points instantly 🔐</p>
+
+</div>
+
+<div class="intro-slide">
+
+<img src="https://i.ibb.co/ks6dTrSr/file-0000000049f87207bbe4d99c33a4a8d1.png">
+
+<h1>Instant Withdraw</h1>
+
+<p>Withdraw earnings directly to your UPI account 🚀</p>
+
+</div>
+
+<div class="intro-buttons">
+
+<button onclick="nextIntro()">Next</button>
+
+<button onclick="closeIntro()">Skip</button>
+
+</div>
+
+</div>
+
+<!-- TOP BAR -->
+
+<div class="topbar hidden" id="topbar">
+
+  <span class="menu-btn" onclick="openMenu()">☰</span>
+
+  <span class="app-title">A1 Mobile</span>
+</div>
+
+<!-- SIDE MENU -->
+
+<div id="sideMenu" class="side-menu hidden">
+  
+  <span class="close-btn" onclick="closeMenu()">×</span>
+  
+<!-- MENU ITEMS -->
+  <h3>Menu</h3>
+
+<div class="menu-item" onclick="openProfile()">
+👤 Profile
+</div>
+
+  <div class="menu-item">
+    💰 Reward Points:
+    <span id="menuPoints">0</span>
+</div>
+   
+<div class="menu-item" onclick="openHelpPopup()">
+🛠️ Help & Support
+</div>
+
+<div class="menu-item" onclick="openFollowPopup()">
+🔗 Follow Link
+</div>
+  
+  <div class="menu-item" onclick="openInfo()">
+  ℹ️ Info
+</div>
+
+
+</div>
+</div>
+  
+<!-- LOGIN PAGE -->
+
+<div class="container hidden" id="loginPage">
+
+ <img 
+ class="logo-animation"
+src="https://i.ibb.co/ks6dTrSr/file-0000000049f87207bbe4d99c33a4a8d1.png"
+style="
+width:110px;
+display:block;
+margin:0 auto 20px;
+border-radius:25px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+">
+
+<h2>Welcome Back 😎</h2>
+
+  <input type="text" id="mobile" placeholder="Mobile Number">
+
+  <input type="password" id="pin" placeholder="PIN">
+
+  <button onclick="login()">Login</button>
+  <button onclick="openRegister()">
+📝 Register
+</button>
+<button onclick="openAdminLogin()">
+👨‍💼 Admin Login
+</button>
+
+</div>
+<div class="container hidden" id="registerPage">
+
+<h2>Create Account</h2>
+
+<input type="text" id="regName" placeholder="Full Name">
+
+<input type="text" id="regMobile" placeholder="Mobile Number">
+
+<input type="password" id="regPin" placeholder="Create PIN">
+
+<input
+id="referralCode"
+type="text"
+placeholder="Referral Code (Optional)"
+class="input-field">
+
+<button onclick="registerUser()">
+Create Account
+</button>
+
+<button onclick="backLogin()">
+Back To Login
+</button>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div class="container hidden" id="dashboard">
+  
+<!-- DASHBOARD CONTENT -->
+  <h2>Dashboard</h2>
+  <!-- PHOTO SLIDER -->
+<div class="slider">
+<!-- SLIDE IMAGES -->
+<img class="slide"
+src="https://i.ibb.co/LhrpN17d/banner1.png">
+
+<img class="slide"
+src="https://i.ibb.co/sJcxScvW/banner2.png">
+
+<img class="slide"
+src="https://i.ibb.co/gb2kPs8T/banner3.png">
+
+</div>
+
+<!-- TEXT SLIDER -->
+<div class="text-slider">
+<!-- TEXT SLIDES -->
+<div class="textSlide active">
+💰 Earn Money By Sharing OTP Leads
+<br><br>
+✨ हर नंबर पर पॉइंट्स कमाओ 😄
+</div>
+
+<div class="textSlide">
+📲 Add Customer Number
+<br><br>
+✅ OTP Verify → Earn Rewards
+</div>
+
+<div class="textSlide">
+🚀 Withdraw Your Earnings
+<br><br>
+💸 Direct UPI Payment
+</div>
+
+</div> <!-- YE IMPORTANT HAI -->
+
+<!-- EARN BUTTON -->
+
+<button class="earn-btn" onclick="openEarn()">
+💰 EARN NOW
+</button>
+</div>
+<!-- PROFILE PAGE -->
+
+<div class="container hidden" id="profilePage">
+  
+<!-- PROFILE CARD -->
+<div class="profile-card">
+  
+<!-- PROFILE HEADING -->
+<h2>👤 My Profile</h2>
+
+<!-- PROFILE DETAILS -->
+<p><b>Name:</b> <span id="profileName"></span></p>
+
+<p><b>Mobile:</b> <span id="profileMobile"></span></p>
+
+<p><b>UPI ID:</b> <span id="profileUpi"></span></p>
+
+<p><b>Reward Points:</b> <span id="profilePoints"></span></p>
+
+<p><b>Joined:</b> <span id="profileJoined"></span></p>
+
+<p>Referral Status:
+<span id="refStatus">Locked 🔒</span>
+</p>
+
+<p>
+<b>Referral Code:</b>
+<span id="profileRefCode"></span>
+
+<button onclick="copyRefCode()">
+📋 Copy
+</button>
+
+</p>
+
+<button onclick="addUpi()">
+Add UPI
+</button>
+
+<button onclick="openWithdraw()">
+💸 Withdraw Points
+</button>
+
+<button onclick="openHistoryPage()">
+📜 Withdrawal History
+</button>
+
+<button onclick="backDashboard()">
+⬅ Back
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="withdrawPage" class="hidden">
+
+<h2>💸 Withdraw Request</h2>
+
+<input
+id="withdrawPoints"
+type="number"
+placeholder="Enter Points">
+
+<button onclick="withdrawRequest()">
+Submit Request
+</button>
+
+<button onclick="showProfile()">
+Back
+</button>
+
+</div>
+
+<div id="historyPage" class="container hidden">
+
+<h2>📜 Withdrawal History</h2>
+
+<div id="withdrawHistoryList"></div>
+
+<button onclick="backProfile()">
+← Back
+</button>
+
+</div>
+
+<!-- ADMIN PAGE -->
+
+<div class="container hidden" id="adminPage">
+
+<div class="profile-card">
+
+<h2>👨‍💼 Admin Panel</h2>
+
+<div class="admin-cards">
+
+<div class="admin-card">
+<h3>👥 Users</h3>
+<p id="totalUsers">0</p>
+</div>
+
+<div class="admin-card">
+<h3>📈 Leads</h3>
+<p id="totalLeads">0</p>
+</div>
+
+<div class="admin-card">
+<h3>🏆 Rewards</h3>
+<p id="totalRewards">0</p>
+</div>
+
+<div class="admin-card">
+<h3>💸 Pending</h3>
+<p id="pendingWithdraws">0</p>
+</div>
+
+</div>
+
+     <h3>⚡ Quick Actions</h3>
+
+<div class="quick-actions">
+
+<div class="action-card" onclick="openWithdrawAdmin()">
+💸
+<span>Withdraw</span>
+</div>
+
+<div class="action-card" onclick="loadAdminData()">
+🔄
+<span>Refresh</span>
+</div>
+
+<div class="action-card" onclick="openTeamPage()">
+👥
+<span>Team</span>
+</div>
+
+<div class="action-card" onclick="openHistoryPage()">
+📜
+<span>History</span>
+</div>
+
+<div class="action-card" onclick="openLeadDetails()">
+📱
+<span>Leads</span>
+</div>
+
+</div>
+     
+<!-- OTP POPUP -->
+<div id="otpBox" class="otp-popup">
+
+<!-- OTP CONTENT -->
+<div class="otp-content">
+
+<!-- OTP HEADING -->
+<h2>🔐 Enter OTP</h2>
+
+<!-- OTP INPUT -->
+<input type="number"
+id="otpInput"
+placeholder="Enter OTP">
+
+<!-- OTP TIMER -->
+<p id="timer">⏳ OTP expires in 30s</p>
+
+<!-- OTP BUTTONS -->
+<div class="otp-buttons">
+
+<!-- VERIFY BUTTON -->
+<button id="verifyBtn"
+onclick="verifyOTP()">
+Verify OTP
+</button>
+
+<!-- RESET BUTTON -->
+<button id="resetBtn"
+onclick="resetOTP()"
+style="display:none;">
+Reset OTP
+</button>
+</div>
+</div>
+</div>
+<!-- HELP POPUP -->
+<div id="helpPopup" class="otp-popup hidden">
+
+<!-- HELP CONTENT -->
+<div class="otp-content">
+
+<!-- HELP HEADING -->
+<h2>🛠️ Help & Support</h2>
+
+<!-- HELP TEXT -->
+<p style="margin-top:15px;">
+Need help? Contact us 👇
+</p>
+
+<!-- INSTAGRAM BUTTON -->
+<button onclick="openInstagram()"
+style="background:#E1306C;margin-top:15px;">
+
+📸 Instagram
+
+</button>
+
+<!-- WHATSAPP BUTTON -->
+<button onclick="openWhatsapp()"
+style="background:#25D366;margin-top:15px;">
+
+💬 WhatsApp Support
+
+</button>
+
+<!-- CLOSE HELP POPUP -->
+<button onclick="closeHelpPopup()"
+style="margin-top:15px;">
+
+❌ Close
+
+</button>
+
+</div>
+
+</div>
+<!-- FOLLOW POPUP -->
+
+<div id="followPopup" class="otp-popup hidden">
+
+<!-- FOLLOW CONTENT -->
+<div class="otp-content">
+
+<!-- FOLLOW HEADING -->
+<h2>🔗 Follow Us</h2>
+
+<!-- FOLLOW TEXT -->
+<p style="margin-top:15px;">
+Join our social platforms 🚀
+</p>
+
+<!-- WEBSITE BUTTON -->
+<button onclick="openWebsite()"
+style="background:#007bff;margin-top:15px;">
+
+🌐 Website
+
+</button>
+
+<!-- INSTAGRAM BUTTON -->
+<button onclick="openInstagram()"
+style="background:#E1306C;margin-top:15px;">
+
+📸 Instagram
+
+</button>
+
+<button onclick="openWhatsappChannel()"
+style="background:#25D366;margin-top:15px;">
+
+<!-- WHATSAPP CHANNEL BUTTON -->
+💬 WhatsApp Channel
+
+</button>
+
+<!-- YOUTUBE CHANNEL BUTTON -->
+<button onclick="openYoutube()"
+style="background:red;margin-top:15px;">
+
+▶️ YouTube
+
+</button>
+
+<!-- CLOSE FOLLOW POPUP -->
+<button onclick="closeFollowPopup()"
+style="margin-top:15px;">
+
+❌ Close
+
+</button>
+
+</div>
+
+</div>
+
+<div id="withdrawAdminPage" class="hidden">
+<h2>Withdraw Requests</h2>
+
+<button onclick="filterWithdraw('pending')">
+⏳ Pending
+</button>
+
+<button onclick="filterWithdraw('approved')">
+✅ Approved
+</button>
+
+<button onclick="filterWithdraw('rejected')">
+❌ Rejected
+</button>
+
+<br><br>
+
+<div id="withdrawList"></div>
+
+<button onclick="backToAdmin()">Back</button>
+</div>
+
+<div id="teamPage" class="hidden">
+
+<h2>👥 Team Members</h2>
+
+<div id="teamList"></div>
+
+<button onclick="backToAdmin()">
+← Back
+</button>
+
+</div>
+
+<div id="leadDetailsPage" class="hidden">
+
+<h2>📱 Lead Details</h2>
+
+<div id="leadDetailsList"></div>
+
+<button onclick="backAdminFromLead()">
+← Back
+</button>
+
+</div>
+<script src="script.js"></script>
+
+<script type="module" src="firebase.js"></script>
+<script src="https://verify.msg91.com/otp-provider.js"></scrip>
+  
+</body>
+</html>
