@@ -27,17 +27,21 @@ function openInfo(){
 ================= */
   let slides = document.querySelectorAll(".slide");
 
-let index = 0;
+if (slides.length > 0) {
 
-setInterval(()=>{
+    let index = 0;
 
-  slides[index].classList.remove("active");
+    setInterval(() => {
 
-  index = (index + 1) % slides.length;
+        slides[index].classList.remove("active");
 
-  slides[index].classList.add("active");
+        index = (index + 1) % slides.length;
 
-},3000);
+        slides[index].classList.add("active");
+
+    }, 3000);
+
+}
 /* ================= 
   APP VARIABLES 
 ================ */
@@ -325,6 +329,7 @@ if (photos.length > 0) {
 }
 
 function showSlides(){
+  if (slides.length === 0) return;
 
 slides.forEach(slide => {
 slide.classList.remove("active");
@@ -343,7 +348,7 @@ index = 0;
 showSlides();
 
 setInterval(showSlides,5000);
-},3000);
+
 let textSlides = document.querySelectorAll(".textSlide");
 
 let textIndex = 0;
