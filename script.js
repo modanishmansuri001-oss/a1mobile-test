@@ -1069,7 +1069,8 @@ document.getElementById("withdrawList").style.color = "black";
      
      document.getElementById("withdrawList").innerHTML = html;
 
-alert(document.getElementById("withdrawAdminPage").innerHTML);
+console.log(html);
+alert(document.getElementById("withdrawList").innerHTML.length);
   
 }
 
