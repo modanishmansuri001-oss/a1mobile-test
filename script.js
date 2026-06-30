@@ -309,6 +309,8 @@ alert("✅ UPI Added Successfully");
 let photos =
 document.querySelectorAll(".photo");
 
+if (photos.length == 0) return;
+
 let photoIndex = 0;
 
 setInterval(()=>{
