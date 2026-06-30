@@ -1071,6 +1071,8 @@ document.getElementById("withdrawList").style.color = "black";
      
      document.getElementById("withdrawList").innerHTML = html;
 
+  alert("Length = " + document.getElementById("withdrawList").innerHTML.length);
+
 console.log(html);
 alert(document.getElementById("withdrawList").innerHTML.length);
   
