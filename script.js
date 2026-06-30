@@ -306,25 +306,23 @@ alert("✅ UPI Added Successfully");
 
 }
 
-let photos =
-document.querySelectorAll(".photo");
+let photos = document.querySelectorAll(".photo");
 
-if (photos.length == 0) return;
+if (photos.length > 0) {
 
-let photoIndex = 0;
+    let photoIndex = 0;
 
-setInterval(()=>{
-  photos[photoIndex]
-  .classList.remove("active-photo");
+    setInterval(() => {
 
-  photoIndex =
-  (photoIndex + 1)
-  % photos.length;
+        photos[photoIndex].classList.remove("active-photo");
 
-  photos[photoIndex]
-  .classList.add("active-photo");
-let slides = document.querySelectorAll(".slide");
-let index = 0;
+        photoIndex = (photoIndex + 1) % photos.length;
+
+        photos[photoIndex].classList.add("active-photo");
+
+    }, 3000);
+
+}
 
 function showSlides(){
 
