@@ -837,7 +837,21 @@ transition:.3s;
 transform:scale(.95);
 }
 
-.action-card span{
+.action-card span{#withdrawAdminPage{
+    display:block;
+    width:100%;
+    padding:20px;
+    box-sizing:border-box;
+    background:#fff;
+}
+
+#withdrawList div{
+    background:#f8f8f8;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:12px;
+    margin-bottom:10px;
+}
 display:block;
 margin-top:8px;
 font-size:12px;
@@ -850,4 +864,5 @@ grid-template-columns:repeat(3,1fr);
 gap:12px;
 margin:15px 0;
 }
+
        
