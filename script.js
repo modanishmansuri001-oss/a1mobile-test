@@ -1029,11 +1029,13 @@ document.getElementById("withdrawAdminPage")
 let snap = await window.getDocs(
 window.collection(window.db, "withdrawRequests")
 );
+  alert("Docs = " + snap.size);
 alert("After Firebase");
      alert("Docs Count = " + snap.size);
 let html = "";
 
 snap.forEach((doc)=>{
+  alert("Inside Loop");
   let data = doc.data();
      alert(JSON.stringify(data));
 
