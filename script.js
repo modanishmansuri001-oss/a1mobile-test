@@ -1054,6 +1054,14 @@ alert("HTML = " + html);
 document.getElementById("withdrawList").style.color = "black";
      
      document.getElementById("withdrawList").innerHTML = html;
+  let box = document.getElementById("withdrawList");
+
+box.style.display = "block";
+box.style.visibility = "visible";
+box.style.opacity = "1";
+box.style.minHeight = "300px";
+
+alert(box.offsetHeight);
 
   alert("Length = " + document.getElementById("withdrawList").innerHTML.length);
 
