@@ -328,27 +328,6 @@ if (photos.length > 0) {
 
 }
 
-function showSlides(){
-  if (slides.length === 0) return;
-
-slides.forEach(slide => {
-slide.classList.remove("active");
-});
-
-slides[index].classList.add("active");
-
-index++;
-
-if(index >= slides.length){
-index = 0;
-}
-
-}
-
-showSlides();
-
-setInterval(showSlides,5000);
-
 let textSlides = document.querySelectorAll(".textSlide");
 
 let textIndex = 0;
