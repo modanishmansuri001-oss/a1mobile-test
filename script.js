@@ -1057,7 +1057,13 @@ document.getElementById("withdrawList").style.color = "black";
      
      document.getElementById("withdrawList").innerHTML = html;
       alert(document.getElementById("withdrawList").innerHTML);
-      return;
+      let box = document.getElementById("withdrawList");
+
+box.style.display = "block";
+box.style.visibility = "visible";
+box.style.opacity = "1";
+box.style.background = "red";
+box.style.minHeight = "500px";
       } catch (e) {
     console.error(e);
     alert("ERROR: " + e.message);
