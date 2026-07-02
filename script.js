@@ -1000,19 +1000,21 @@ alert("Withdrawal Request Submitted");
 let currentFilter = "pending";
 
 window.openWithdrawAdmin = async function(){
-     
- alert("Withdraw Button Working");
-     alert("Before Firebase");
-  
-  document.getElementById("adminPage")
-.classList.add("hidden");
 
-document.getElementById("withdrawAdminPage")
-.classList.remove("hidden");
+    try {
 
-let snap = await window.getDocs(
-window.collection(window.db, "withdrawRequests")
-);
+    alert("Withdraw Button Working");
+    alert("Before Firebase");
+
+    document.getElementById("adminPage")
+    .classList.add("hidden");
+
+    document.getElementById("withdrawAdminPage")
+    .classList.remove("hidden");
+
+    let snap = await window.getDocs(
+    window.collection(window.db,"withdrawRequests")
+    );
   alert("Docs = " + snap.size);
 alert("After Firebase");
      alert("Docs Count = " + snap.size);
@@ -1054,6 +1056,10 @@ alert("HTML = " + html);
 document.getElementById("withdrawList").style.color = "black";
      
      document.getElementById("withdrawList").innerHTML = html;
+      } catch (e) {
+    console.error(e);
+    alert("ERROR: " + e.message);
+    }
   console.log("HTML Length:", html.length);
 console.log(document.getElementById("withdrawList").innerHTML);
 alert("HTML inserted");
