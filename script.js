@@ -1054,6 +1054,9 @@ alert("HTML = " + html);
 document.getElementById("withdrawList").style.color = "black";
      
      document.getElementById("withdrawList").innerHTML = html;
+  console.log("HTML Length:", html.length);
+console.log(document.getElementById("withdrawList").innerHTML);
+alert("HTML inserted");
   let box = document.getElementById("withdrawList");
 
 box.style.display = "block";
