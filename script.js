@@ -1068,25 +1068,6 @@ box.style.minHeight = "500px";
     console.error(e);
     alert("ERROR: " + e.message);
     }
-  console.log("HTML Length:", html.length);
-console.log(document.getElementById("withdrawList").innerHTML);
-alert("HTML inserted");
-  let box = document.getElementById("withdrawList");
-
-box.style.display = "block";
-box.style.visibility = "visible";
-box.style.opacity = "1";
-box.style.minHeight = "300px";
-
-alert(box.offsetHeight);
-
-  alert("Length = " + document.getElementById("withdrawList").innerHTML.length);
-
-console.log(html);
-alert(document.getElementById("withdrawList").innerHTML.length);
-  
-}
-
 
 window.approveWithdraw = async function(id){
 
